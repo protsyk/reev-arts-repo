@@ -508,7 +508,7 @@
   .pb_cover_v3 .sub-heading,
   .pb_cover_v4 .sub-heading {
     font-size: 20px;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 1);
     max-width: 600px;
     float: left; }
   .pb_cover.text-center .sub-heading,
@@ -1089,7 +1089,8 @@ a {
     padding: 10px;
     border: 1px solid rgba(255, 255, 255, 0.5); }
   .pb_navbar .nav-link {
-    font-size: 15px;
+    font-size: 17px;
+    font-weight: bold;
     padding-left: 1rem !important;
     padding-right: 1rem !important; }
     @media (max-width: 1199px) {
@@ -1708,5 +1709,51 @@ a {
 
 .overflow-hidden {
   overflow: hidden; }
+
+.video-btn {
+  font-weight: bold;
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.pb_cover_v4 .sub-heading {
+  font-weight: 400;
+}
+
+.modal-dialog {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.modal-body {
+  position:relative;
+  padding:0px;
+}
+
+.close {
+  position:absolute;
+  right:-30px;
+  top:0;
+  z-index:999;
+  font-size:2rem;
+  font-weight: normal;
+  color:#fff;
+  opacity:1;
+}
+
+.modal-open {
+  padding-right: 0 !important;
+}
+
+body.modal-open > :not(.modal) {
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+}
+
+a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):active {
+  color: #000;
+}
 
 /*# sourceMappingURL=style.css.map */

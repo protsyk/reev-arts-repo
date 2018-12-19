@@ -7,8 +7,10 @@
 		<title>Law &mdash; Free Multi-Purpose One Page Bootstrap 4 Theme by uicookies.com</title>
 		<meta name="description" content="Free Bootstrap 4 Theme by uicookies.com">
 		<meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
-    
-    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600|Montserrat:200,300,400" rel="stylesheet">
+    <link rel="icon"
+          type="image/png"
+          href="assets/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,700|Montserrat:200,300,400,700" rel="stylesheet">
 
 		<link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="assets/fonts/ionicons/css/ionicons.min.css">
@@ -27,7 +29,6 @@
     
     <nav class="navbar navbar-expand-lg navbar-dark pb_navbar pb_scrolled-light" id="pb-navbar">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Law</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#probootstrap-navbar" aria-controls="probootstrap-navbar" aria-expanded="false" aria-label="Toggle navigation">
           <span><i class="ion-navicon"></i></span>
         </button>
@@ -37,7 +38,6 @@
             <li class="nav-item"><a class="nav-link" href="#section-about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#section-why-us">Why</a></li>
             <li class="nav-item"><a class="nav-link" href="#section-practicing-areas">Practicing Areas</a></li>
-            <li class="nav-item"><a class="nav-link" href="#section-attorneys">Attorneys</a></li>
             <li class="nav-item"><a class="nav-link" href="#section-testimonials">Testimonials</a></li>
             <li class="nav-item"><a class="nav-link" href="#section-contact">Contact</a></li>
           </ul>
@@ -46,20 +46,42 @@
     </nav>
     <!-- END nav -->
 
-    <section class="pb_cover_v1 text-left cover-bg-black cover-bg-opacity-4" style="background-image: url(assets/images/1900x1200_img_7.jpg)" id="section-home">
+    <section class="pb_cover_v1 text-left cover-bg-black cover-bg-opacity-4" style="background-image: url(assets/images/Header_Reev_8.jpg)" id="section-home">
       <div class="container">
         <div class="row align-items-center justify-content-end">
           <div class="col-md-6  order-md-1">
 
-            <h2 class="heading mb-3">The Law Firm</h2>
-            <div class="sub-heading"><p class="mb-5">A free template by <a href="https://uicookies.com/">uicookies.com</a> for Law Firm</p>
-            <p><a href="#section-contact" role="button" class="btn smoothscroll pb_outline-light btn-xl pb_font-13 p-4 rounded-0 pb_letter-spacing-2">Free Consultation</a></p>
+            <h2 class="heading mb-3">ReevArts</h2>
+            <div class="sub-heading"><p class="mb-5">More than just a video</p>
+            <p><a role="button" class="btn smoothscroll pb_outline-light btn-xl pb_font-13 p-4 rounded-0 pb_letter-spacing-2 video-btn" data-toggle="modal" data-target="#videoModal" data-src="https://player.vimeo.com/video/307228189?badge=0">Play showreel</a></p>
             </div>
             
           </div>  
         </div>
       </div>
     </section>
+
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered m-auto" role="document">
+        <div class="modal-content">
+
+
+          <div class="modal-body">
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <!-- 16:9 aspect ratio -->
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always">></iframe>
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
     <!-- END section -->
     
     

@@ -3,8 +3,8 @@ $(document).ready(function($) {
 	"use strict";
 
 	var loader = function() {
-		
-		setTimeout(function() { 
+
+		setTimeout(function() {
 			if($('#pb_loader').length > 0) {
 				$('#pb_loader').removeClass('show');
 			}
@@ -22,19 +22,19 @@ $(document).ready(function($) {
 
 			if (st > 150) {
 				if ( !navbar.hasClass('scrolled') ) {
-					navbar.addClass('scrolled');	
+					navbar.addClass('scrolled');
 				}
-			} 
+			}
 			if (st < 150) {
 				if ( navbar.hasClass('scrolled') ) {
 					navbar.removeClass('scrolled sleep');
 				}
-			} 
+			}
 			if ( st > 350 ) {
 				if ( !navbar.hasClass('awake') ) {
-					navbar.addClass('awake');	
+					navbar.addClass('awake');
 				}
-				
+
 				if(sd.length > 0) {
 					sd.addClass('sleep');
 				}
@@ -51,7 +51,7 @@ $(document).ready(function($) {
 		});
 	};
 	scrollWindow();
-	
+
 	// slick sliders
 	var slickSliders = function() {
 		$('.single-item').slick({
@@ -86,7 +86,7 @@ $(document).ready(function($) {
 		  slidesToScroll: 1,
 		  dots: true,
 		  infinite: true,
-		  
+
 		  autoplay: true,
 	  	autoplaySpeed: 2000,
 
@@ -205,15 +205,44 @@ $(document).ready(function($) {
 	offCanvasNav();
 
 	var ytpPlayer = function() {
-		if ($('.ytp_player').length > 0) { 
-			$('.ytp_player').mb_YTPlayer();	
+		if ($('.ytp_player').length > 0) {
+			$('.ytp_player').mb_YTPlayer();
 		}
 	}
 	ytpPlayer();
 
+	// video modal
+    var playVideo = function () {
+        var videoSrc;
+        $('.video-btn').click(function () {
+            videoSrc = $(this).data('src');
+        });
+        $('#videoModal').on('shown.bs.modal', function (e) {
+            $('#video').attr('src', videoSrc + '?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1');
+        });
+        $('#videoModal').on('hide.bs.modal', function (e) {
+            $('#video').attr('src', videoSrc);
+        });
+    };
+    playVideo();
 
-	
+    var disableScroll = function () {
+        var scrollPos = 0;
 
+        $('.modal')
+            .on('show.bs.modal', function () {
+                scrollPos = $(window).scrollTop();
+                $('body, html').css({
+                    overflow: 'hidden',
+                });
+            })
+            .on('hide.bs.modal', function () {
+                $('body, html').css({
+                    overflow: '',
+                }).scrollTop(scrollPos);
+            });
+    };
+    disableScroll();
 
 });
 
