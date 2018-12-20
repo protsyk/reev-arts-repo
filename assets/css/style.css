@@ -1710,6 +1710,10 @@ a {
 .overflow-hidden {
   overflow: hidden; }
 
+.slogan {
+  font-weight: 400;
+}
+
 .video-btn {
   font-weight: bold;
   border: 1px solid rgba(255, 255, 255, 1);
